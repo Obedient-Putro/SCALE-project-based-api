@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 
 export const checkLoggedIn = async (req, res, next) => {
     try {
-        const refreshToken = req.cookies['refreshToken'];
+        const refreshToken = req.cookies.refreshToken;
         if(!refreshToken) return res.redirect("/");
         const user = await Users.findAll({
             where: {
@@ -23,7 +23,7 @@ export const checkLoggedIn = async (req, res, next) => {
 const pathRedirect = "/dashboard";
 export const homePage = async (req, res, next) => {
     try {
-        const refreshToken = req.cookies['refreshToken'];
+        const refreshToken = req.cookies.refreshToken;
         if(!refreshToken) return next();
         const user = await Users.findAll({
             where: {
@@ -31,7 +31,7 @@ export const homePage = async (req, res, next) => {
             }
         });
         if(!user[0]) return next();
-        return res.redirect(pathRedirect)
+        return res.redirect(pathRedirect);
     } catch (error) {
         return error;
     }

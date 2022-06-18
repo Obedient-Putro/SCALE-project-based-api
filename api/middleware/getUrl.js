@@ -2,7 +2,7 @@
 
 export const getUrl = (req, res, next) => {
     try {
-        const fullUrl = req.protocol + '://' + req.get('host');
+        const fullUrl = 'https' + '://' + req.get('host');
         req.sendUrl = fullUrl;
         next();
     } catch (error) {
