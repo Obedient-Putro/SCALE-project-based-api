@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(-90deg, #ffffff, #76b4ff);
+}
+
+.Warning{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .part-greet {
+        display: none !important;
+    }
+
+    .list-container {
+        display: none !important;
+    }
+
+    header {
+        display: none !important;
+    }
+
+    header h2 {
+        display: none !important;
+    }
+
+    .list-container {
+        display: none !important;
+    }
+
+    .workspace-list {
+        display: none !important;
+    }
+
+    .Warning{
+        display: block;
+    }
+
+    .warning-content{
+        text-align: center;
+    }
+}
+
+/*------------------------------------ LOGO/TITLE AND HEADING STYLE -----------------------------------*/
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(-45deg, #84b3ec, #559ef7);
+}
+  
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header .header-content a{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: #ffffff;
+    transition-property: background;
+}
+  
+header .header-content a:hover{
+    background: #f0f0f0;
+}
+
+header .header-content p {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 960px) {
+    header{
+        padding: 10px 10px;
+    }
+}
+
+
+
+/*--------------------------------------------- MAIN CONTENT GREET --------------------------------------------*/
+.bodyContent {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.part-greet {
+    display: flex;
+}
+
+.userGreet {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-weight: 600;
+    max-width: 60%;
+}
+
+.fa-crow {
+    color:#0f2138;
+    font-size: 4.2em;
+    pointer-events: none;
+}
+
+.greetIcon {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.greetWord {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+.changeQuote {
+    display: flex;
+    justify-content: center;
+    margin-left: 6rem;
+    max-width: 40%;
+}
+
+.changeQuote-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.changeQuote-container p {
+    padding-left: 1rem;
+    display: block;
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+}
+
+.change-quote-btn {
+    display: block;
+    margin: auto;
+    background: #1a79ca;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 15px;
+}
+
+.change-quote-btn i {
+    color: #ffffff;
+    font-size: 2em;
+    pointer-events: none;
+}
+
+.change-quote-btn:hover {
+    background: #185a94;
+}
+
+@media screen and (max-width: 960px){
+    .part-greet {
+        flex-wrap: wrap;
+    }
+
+    .changeQuote-container p {
+        display: none;
+    }
+
+    .userGreet {
+        max-width: 80%;
+    }
+
+    .changeQuote {
+        max-width: 20%;
+    }
+
+    .changeQuote {
+        margin-left: 2rem;
+    }
+    
+}
+
+
+
+/*--------------------------------------------- MAIN CONTENT --------------------------------------------*/
+.list-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-workspace {
+    display: flex;
+    justify-content: center;
+}
+
+.new-workspace-btn {
+    display: flex;
+    padding: 1rem;
+    background: rgb(250, 181, 53);
+    border: none;
+    border-radius: 20px;
+}
+
+.new-workspace-btn i {
+    display: block;
+    font-size: 1.5em;
+    margin: auto;
+}
+
+.new-workspace-btn p {
+    display: block;
+    font-weight: 600;
+    padding-left: 0.5rem;
+}
+
+.new-workspace-btn:hover {
+    background: rgb(219, 152, 27);
+}
+
+.workspace-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 1.5rem;
+}
+
+.workspace {
+    display: flex;
+    justify-content: space-between;
+    width: 28%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: #fdd1ae;
+    margin-bottom: 1%;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.workspace .left-side {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+    max-width: 80%;
+}
+
+.workspace .left-side p:first-child {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.workspace .left-side p:last-child {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.workspace .right-side {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 20%;
+}
+
+.workspace .right-side button {
+    padding-left: 0.6rem;
+    padding-right: 0.5rem;
+    border: none;
+}
+
+.workspace .right-side button i {
+    color: #ffffff;
+    font-size: 1.1em;
+    pointer-events: none;
+}
+
+#editBtn{
+    background-color: rgb(250, 166, 40);
+}
+
+#editBtn:hover{
+    background-color: rgb(207, 139, 36);
+}
+
+#removeBtn{
+    background-color: rgb(250, 65, 65);
+}
+
+#removeBtn:hover{
+    background-color: rgb(204, 53, 53);
+}
+
+@media screen and (max-width: 960px){
+    .workspace {
+        width: 45%;
+    }
+}
+
+/*----------------------------------------- POPUP WINDOW STYLE -----------------------------------------*/
+.popup-overall {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.gradeInformation-popup,
+.renameColumn-popup,
+.addColumn-popup,
+.rmvColumn-popup,
+.add-popup {
+    overflow: auto;
+    position: fixed;
+    z-index: 200;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 30vw;
+    padding: 0.8rem 1.8rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+.gradeInformation-popup.activate,
+.renameColumn-popup.activate,
+.addColumn-popup.activate,
+.rmvColumn-popup.activate,
+.add-popup.activate {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+  
+#popup .close-btn {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background:rgb(141, 30, 30);
+    color: #eee;
+    text-align: center;
+    line-height: 1.2rem;
+    border-radius: 0.95rem;
+    cursor: pointer;
+}
+  
+#popup .close-btn:hover{
+    background:rgb(214, 11, 11);
+    font-weight: bold;
+}
+  
+#item1 {
+    grid-area: 1 / 1 / span 1 / span 3;
+}
+  
+#item2 {
+    grid-area: 2 / 1 / span 1 / span 3;
+}
+  
+#item11 {
+    grid-area: 11 / 1 / span 1 / span 3;
+}
+  
+#popup form {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+  
+#popup form h2 {
+    text-align: center;
+    color:#222;
+    margin: 0.5rem 0 1.2rem;
+    font-size: 1.3rem;
+    background-color: #fff;
+}
+  
+#popup form .form-element {
+    margin: 1rem 0px;
+    background-color: #fff;
+}
+  
+#popup form .form-element label {
+    font-size: 0.9rem;
+    color:#222;
+    background-color: #fff;
+}
+  
+#popup form .form-element input[type="text"]:focus,
+#popup form .form-element input[type="number"]:focus {
+    border-color: rgb(57, 143, 255);
+    font-weight: bold;
+    outline: none;
+}
+  
+#popup form .form-element input[type="text"]:hover,
+#popup form .form-element input[type="number"]:hover {
+    border-color: rgb(119, 167, 231);
+}
+  
+#popup form .form-element input[type="text"] {
+    background-color: #fff;
+    margin-top: 0.3rem;
+    display: block;
+    width: 93%;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+}
+  
+#popup form .form-element input[type="number"] {
+    background-color: #fff;
+    margin-top: 0.2rem;
+    display: block;
+    width: 77%;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+}
+  
+#popup form .form-element input[type="submit"] {
+    width: 100%;
+    height: 2.4rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgb(82, 78, 78);
+    color: #f5f5f5;
+    border-radius: 16px;
+    cursor: pointer;
+}
+  
+#popup form .form-element input[type="submit"]:hover {
+    background: #1a79ca;
+    color: #f5f5f5;
+    font-weight: bold;
+}
+  
+#popup form .form-element a {
+    background-color: #fff;
+    display: block;
+    text-align: right;
+    font-size: 0.95rem;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#popup form .form-element select {
+    background-color: #fff;
+    margin-top: 0.2rem;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 900px){
+    .gradeInformation-popup,
+    .renameColumn-popup,
+    .addColumn-popup,
+    .rmvColumn-popup,
+    .add-popup {
+        height: 90vh;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 680px), screen and (max-height: 600px){
+    #item1 {
+        grid-area: 1 / 1 / span 1 / span 5;
+    }
+      
+    #item2 {
+        grid-area: 2 / 1 / span 1 / span 5;
+    }
+      
+    #item11 {
+        grid-area: 11 / 1 / span 1 / span 5;
+    }
+      
+    #popup form {
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+    }
+}

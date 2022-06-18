@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/dashboardStyle.css">
+    <link rel="icon" href="./env/calculatorIcon.ico">
+
+    <title>SCALE | Dashboard</title>
+</head>
+<body>
+    <!-- IF MEDIA SECREEN IS PORTRAIT THEN REJECT -->
+
+
+    <!-- Pop up Windows Handler-->
+    <div class="popup-overall">
+        <div class="popup-body" id="getPopup">
+
+            <!-- Add Entry Form -->
+            <div class="add-popup" id="popup">
+                <div class="close-btn">&times;</div>
+                <form id="addWorkspaceForm">
+                    <h2 id="item1">Add Workspace Window</h2>
+                    <div class="form-element" id="item2">
+                        <label for="WorkspaceName">Enter Workspace Name</label>
+                        <input type="text" id="WorkspaceName" placeholder="Enter Name" required>
+                    </div>
+                    <div class="form-element" id="item11">
+                        <input type="submit" id="addWorkspace-btn" value="ADD WORKSPACE">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Add Column Form -->
+            <div class="addColumn-popup" id="popup">
+                <div class="close-btn">&times;</div>
+                <form>
+                    <h2 id="item1">Add Column Window</h2>
+                    <div class="form-element" id="item2">
+                        <label for="Name">Please enter a Column Name</label>
+                        <input type="text" id="ColumnName" placeholder="Enter Name" required>
+                    </div>
+                    <div class="form-element" id="item11">
+                        <input type="submit" id="addColumn-btn" value="ADD COLUMN">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Rename Column Form -->
+            <div class="renameColumn-popup" id="popup">
+                <div class="close-btn">&times;</div>
+                <form>
+                    <h2 id="item1">Rename Column Window</h2>
+                    <div class="form-element" id="item2">
+                        <label for="Name">Please Select a Column to Rename</label>
+                        <select id="renameArray">
+                            
+                        </select>
+                    </div>
+                    <div class="form-element" id="item3">
+                        <label for="Name">Please enter a <b>NEW</b> Column Name</label>
+                        <input type="text" id="renameName" placeholder="Enter Column Name" required>
+                    </div>
+                    <div class="form-element" id="item11">
+                        <input type="submit" id="renameColumn-btn" value="RENAME COLUMN">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ###################################################################################### -->
+    <section>
+        <header>
+            <h2><a href="#" class="logo">❄️ SCALE</a></h2>
+            <div class="header-content">
+                <p>Bored? you can | <a href="#" class="navi" id="logoutBtn">Logout</a> | here</p>
+            </div>
+        </header>
+        <div class="bodyContent">
+            <div class="part-greet">
+                <div class="userGreet">
+                    <div class="greetIcon">
+                        <i class="fa-solid fa-crow"></i>
+                    </div>
+                    <div class="greetWord">
+                        <h2>Greetings, <%= name %></h2>
+                        <input type="hidden" id="<%= userId %>" name="<%= name %>" value="<%= email %>" class="userInfo">
+                        <p id="quotes">"Wherever you go, no matter what the weather, always bring your own sunshine"</p>
+                        <p id="quotesFrom">-Anthony J. D'Angelo | #happy</p>
+                    </div>
+                </div>
+                <div class="changeQuote">
+                    <div class="changeQuote-container">
+                        <button class="change-quote-btn" id="quoteBtn">
+                            <i class="fa-solid fa-dice"></i>
+                        </button>
+                        <p>Wanna get more motivation? <br/> Just learn and get some practies</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="list-container">
+                <div class="new-workspace">
+                    <button class="new-workspace-btn" id="addBtn">
+                        <i class="fa-solid fa-plus"></i>
+                        <p>Create new workspace</p>
+                    </button>
+                </div>
+                <div class="workspace-list">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="Warning">
+            <div class="warning-content">
+                <h1>❄️ SCALE</h1>
+                <p>We are sorry for this unconfortable.</p>
+                <p>For getting best experience please turn your phone to "LANDSCAPE MODE"</p>
+                <p>Or you can use PC or Device that has wide screen to continue editing.</p>
+                <img src = "./env/rotate.png" style = "width: 20vw; height: auto; padding-top: 5vh;">
+            </div>
+        </div>
+
+    </section>
+
+
+    <script>
+        const BASE_URL = "<%= apiURL %>";
+        const NEXT_PATH = "<%= nextPath %>";
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/jquery 3.6.0/jquery-3.6.0.js"></script>
+    <script src="./js/dashboardScript.js"></script>
+
+</body>
+</html>

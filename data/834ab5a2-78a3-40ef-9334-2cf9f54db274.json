@@ -1,0 +1,68 @@
+{
+  "header": [
+    "Name",
+    "Tugas1",
+    "Tugas2",
+    "Tugas3",
+    "Tugas4",
+    "Tugas5",
+    "UTS",
+    "UAS",
+    "Grade",
+    "Ket"
+  ],
+  "body": [
+    {
+      "ID": 1813,
+      "Name": "Obedient Boas JR Putro",
+      "Tugas1": 60,
+      "Tugas2": 50,
+      "Tugas3": 70,
+      "Tugas4": 80,
+      "Tugas5": 90,
+      "UTS": 80,
+      "UAS": 90,
+      "Grade": "78.75 (B+)",
+      "Ket": "Lulus"
+    },
+    {
+      "ID": 51202,
+      "Name": "William Darren Beethoven Sahid",
+      "Tugas1": 60,
+      "Tugas2": 50,
+      "Tugas3": 70,
+      "Tugas4": 80,
+      "Tugas5": 90,
+      "UTS": 80,
+      "UAS": 90,
+      "Grade": "78.75 (B+)",
+      "Ket": "Lulus"
+    },
+    {
+      "ID": 2543,
+      "Name": "Aril Saraun",
+      "Tugas1": 60,
+      "Tugas2": 50,
+      "Tugas3": 70,
+      "Tugas4": 80,
+      "Tugas5": 90,
+      "UTS": 80,
+      "UAS": 90,
+      "Grade": "78.75 (B+)",
+      "Ket": "Lulus"
+    },
+    {
+      "ID": 1662,
+      "Name": "Livirji Viorela Wantalangi",
+      "Tugas1": 60,
+      "Tugas2": 50,
+      "Tugas3": 70,
+      "Tugas4": 80,
+      "Tugas5": 90,
+      "UTS": 80,
+      "UAS": 90,
+      "Grade": "78.75 (B+)",
+      "Ket": "Lulus"
+    }
+  ]
+}

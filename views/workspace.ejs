@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/workspaceStyle.css">
+    <link rel="icon" href="./env/calculatorIcon.ico">
+
+    <title>SCALE | Workspace</title>
+</head>
+<section>
+    <!-- IF MEDIA SECREEN IS PORTRAIT THEN REJECT -->
+
+
+    <!-- Pop up Windows Handler-->
+    <div class="popup-overall">
+        <div class="popup-body" id="getPopup">
+
+            <!-- Add Entry Form -->
+            <div class="add-popup" id="popup">
+                <div class="close-btn">&times;</div>
+                <form id="AddFormWindow">
+                    
+                </form>
+            </div>
+
+            <!-- Remove Column Form -->
+            <div class="rmvColumn-popup" id="popup">
+                <div class="close-btn">&times;</div>
+                <form>
+                    <h2 id="item1">Remove Column Window</h2>
+                    <div class="form-element" id="item2">
+                        <label for="Name">Please Select a Column</label>
+                        <select id="columnArray">
+                            
+                        </select>
+                    </div>
+                    <div class="form-element" id="item11">
+                        <input type="submit" id="rmvColumn-btn" value="REMOVE">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Add Column Form -->
+            <div class="addColumn-popup" id="popup">
+                <div class="close-btn">&times;</div>
+                <form>
+                    <h2 id="item1">Add Column Window</h2>
+                    <div class="form-element" id="item2">
+                        <label for="Name">Please enter a Column Name</label>
+                        <input type="text" id="ColumnName" placeholder="Enter Name" required>
+                    </div>
+                    <div class="form-element" id="item11">
+                        <input type="submit" id="addColumn-btn" value="ADD COLUMN">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Rename Column Form -->
+            <div class="renameColumn-popup" id="popup">
+                <div class="close-btn">&times;</div>
+                <form>
+                    <h2 id="item1">Rename Column Window</h2>
+                    <div class="form-element" id="item2">
+                        <label for="Name">Please Select a Column to Rename</label>
+                        <select id="renameArray">
+                            
+                        </select>
+                    </div>
+                    <div class="form-element" id="item3">
+                        <label for="Name">Please enter a <b>NEW</b> Column Name</label>
+                        <input type="text" id="renameName" placeholder="Enter Column Name" required>
+                    </div>
+                    <div class="form-element" id="item11">
+                        <input type="submit" id="renameColumn-btn" value="RENAME COLUMN">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Grade Information Popup -->
+            <div class="gradeInformation-popup" id="popup">
+                <div class="close-btn">&times;</div>
+                <form>
+                    <h2 id="item1">Grade Calculate Information</h2>
+                    <div class="form-element" id="item2">
+                        <dl>Untuk tiap kolom tugas akan diambil nilai rata-rata dengan bobot akhir 50%</dl>
+                        <dl>Untuk kolom UTS dan UAS akan diambil nilai dengan bobot masing-masing 25%</dl>
+                        <dl>Melakukan rename header tabel tidak akan mengubah perhitungan grade</dl>
+                        <dl>Kolom pertama tabel untuk text dan sisa kolom untuk angka</dl>
+                    </div>
+                </form>
+            </div>
+
+            <!--<div id="msg">
+                <pre></pre>
+            </div>-->
+        </div>
+    </div>
+
+
+    <!-- ###################################################################################### -->
+    <section>
+        <header>
+            <h2><a href="#" class="logo">❄️ SCALE</a></h2>
+            <div class="header-content" id="<%= id %>">
+                <p><%= name %> | <a href="#" class="navi" id="openModalSignin">Dashboard</a></p>
+            </div>
+        </header>
+        <div class="bodyGrid">
+            <div class="logicBtn-container">
+                <button class="oneBtn-container" id="Save-Table" onclick="">
+                    <div class="navi-button">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        <a>Save</a>
+                    </div>
+                </button>
+                <button class="oneBtn-container" id="Add-Column" onclick="AddColumnPopupWindow()">
+                    <div class="navi-button">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <a>Column</a>
+                    </div>
+                </button>
+                <button class="oneBtn-container" id="Remove-Column" onclick="RmvColumnPopupWindow()">
+                    <div class="navi-button">
+                        <i class="fa-solid fa-circle-minus"></i>
+                        <a>Column</a>
+                    </div>
+                </button>
+                <button class="oneBtn-container" id="Clear-Entry" onclick="clearAllEntry()">
+                    <div class="navi-button">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <a>Entry</a>
+                    </div>
+                </button>
+                <button class="oneBtn-container" id="Clear-Table" onclick="clearTable()">
+                    <div class="navi-button">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <a>Table</a>
+                    </div>
+                </button>
+                <button class="oneBtn-container" id="Grade-Information" onclick="openGradeInformationPopup()">
+                    <div class="navi-button">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <a>Grade</a>
+                    </div>
+                </button>
+                <div class="searchBar"> 
+                    <div class="wrapper" id="search-wrapper">
+                        <img src="./env/searchIcon.png ">
+                        <input id="search-input" type="text" placeholder="Search Name">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Table Output List -->
+            <div class="table-container">
+                <table class="table-content" id="getTable">
+                    <thead id="headerTable">
+                        
+                    </thead>
+                    <tbody id="contentTable">
+    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="Warning">
+        <div class="warning-content">
+            <h1>❄️ SCALE</h1>
+            <p>We are sorry for this unconfortable.</p>
+            <p>For getting best experience please turn your phone to "LANDSCAPE MODE"</p>
+            <p>Or you can use PC or Device that has wide screen to continue editing.</p>
+            <img src = "./env/rotate.png" style = "width: 20vw; height: auto; padding-top: 5vh;">
+        </div>
+    </div>
+
+        
+    <script>
+        const BASE_URL = "<%= apiURL %>";
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/jquery 3.6.0/jquery-3.6.0.js"></script>
+    <script src="./js/workspaceScript.js"></script>
+
+</body>
+</html>

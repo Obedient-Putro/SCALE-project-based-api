@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(-90deg, #ffffff, #004faf);
+}
+
+.Warning{
+    padding-top: 10vh;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .bodyGrid {
+        display: none !important;
+    }
+
+    header {
+        display: none !important;
+    }
+
+    header h2 {
+        display: none !important;
+    }
+
+    .Warning{
+        display: block;
+    }
+
+    .warning-content{
+        text-align: center;
+    }
+}
+
+/*------------------------------------ LOGO/TITLE AND HEADING STYLE -----------------------------------*/
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(-45deg, #84b3ec, #559ef7);
+}
+  
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header .header-content a{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: #ffffff;
+    transition-property: background;
+}
+  
+header .header-content a:hover{
+    background: #f0f0f0;
+}
+
+header .header-content p {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 960px) {
+    header{
+        padding: 10px 10px;
+    }
+}
+
+
+
+
+/*--------------------------------------------- SEARCH BAR --------------------------------------------*/
+.logicBtn-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    flex-wrap: wrap;
+    background: linear-gradient(-45deg, #cbe2f8, #a5caf8);
+}
+
+.contentButton {
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.oneBtn-container{
+    align-items: center;
+    background: #ffffff;
+    border:none;
+    outline: none;
+    height: 2.8rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.oneBtn-container .navi-button{
+    justify-content: flex;
+    justify-content: space-between;
+    text-align: center;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border:none;
+    outline: none;
+    pointer-events: none;
+}
+
+.oneBtn-container .navi-button a {
+    text-decoration: none;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+ 
+.oneBtn-container:hover {
+    background-color: #f0f0f0;
+}
+
+.oneBtn-container:focus {
+    background-color: #53acfa;
+}
+
+.searchBar .wrapper {
+    width: 100%;
+    height: 2.8rem;
+    background: #ffffff;
+    margin-bottom: 0.5em;
+    border: solid #ffffff;
+    transition: 0.3s;
+    transition-property: border-color;
+}
+
+.searchBar .wrapper:hover {
+    border-color: #f0f0f0;
+}
+
+.searchBar .wrapper:focus-within {
+    border-color: #53acfa;
+}
+
+.searchBar .wrapper img {
+    padding-top: 0.3rem;
+    padding-left: 0.2rem;
+    align-items: center;
+    background: #ffffff;
+    height: auto;
+    max-width: 80%;
+    float: left;
+}
+
+.searchBar .wrapper input {
+    width: 80%;
+    outline: none;
+    border: none;
+    background: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000;
+    float: left;
+    margin: 0.5rem 0.1rem 0 0.2rem;
+}
+
+.fa-circle-plus {
+    color: green;
+}
+
+.fa-circle-minus {
+    color: red;
+}
+
+.fa-circle-xmark {
+    color: rgb(141, 30, 30);
+}
+
+
+
+
+/*------------------------------------------- TABLE CONTENT ------------------------------------------*/
+.table-container {
+    overflow: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.table-container .table-content {
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    min-width: 480px;
+    width: 100%;
+}
+  
+.table-container .table-content thead tr {
+    color:#000;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.table-container .table-content th {
+    background-color: #64a1ec;
+    position: sticky;
+    top:0;
+    z-index: 50;
+}
+
+.table-container .table-content td,
+.table-container .table-content th {
+    min-width: 8vw;
+}
+
+.table-container .table-content th:first-child,
+.table-container .table-content th:last-child {
+    position: sticky;
+    z-index: 101;
+}
+
+.table-container .table-content td.nameCol,
+.table-container .table-content th.nameCol,
+.table-container .table-content th:first-child {
+    padding-left: 1rem;
+    min-width: 20vw;
+    left: 0;
+    position: sticky;
+}
+
+.table-container .table-content td:last-child, 
+.table-container .table-content th:last-child {
+    min-width: 9vw;
+    position: sticky;
+    right: 0;
+}
+  
+.table-container .table-content th,
+.table-container .table-content td {
+    text-align: center;
+}
+  
+.table-container .table-content tbody tr td {
+    border-bottom: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+  
+.table-container .table-content tbody tr:nth-of-type(even) td,
+.table-container .table-content tbody tr:nth-of-type(even) td .editor-button, 
+.table-container .table-content tbody tr:nth-of-type(even) td .editButtonWrap{
+    background-color: #f3f3f3;
+}
+  
+.table-container .table-content tbody tr:last-of-type {
+    border-bottom: 2px solid #74c0e4;
+    border-radius: 5px 5px 0 0;
+}
+
+.table-container .table-content tbody tr td:first-child {
+    text-align: left;
+}
+  
+.table-container .table-content tbody tr:hover {
+    color: #74c0e4;
+    text-decoration: none;
+}
+
+.headerBtn{
+    min-width: 9vw;
+    align-items: center;
+    background: #ffffff;
+    border:none;
+    outline: none;
+    height: 2.8rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.headerBtn .eaderBtn-Wrapper, 
+.bodyTable-button .bodyBtn-Content,
+.addBtn-container .addBtn-content{
+    justify-content: flex;
+    justify-content: space-between;
+    text-align: center;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border:none;
+    outline: none;
+    pointer-events: none;
+}
+
+.headerBtn .eaderBtn-Wrapper a {
+    text-decoration: none;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+ 
+.headerBtn:hover {
+    background-color: #f0f0f0;
+}
+
+.headerBtn:focus {
+    background-color: yellowgreen;
+}
+
+.bodyTable-button{
+    min-width: 4.5vw;
+    align-items: center;
+    border:none;
+    outline: none;
+    height: 2.8rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+#Edit-Row{
+    background: rgb(252, 252, 82);
+}
+
+#Edit-Row:hover {
+    background: rgb(204, 204, 29);
+}
+
+#Remove-Entry{
+    background: rgb(252, 72, 72);
+}
+ 
+#Remove-Entry:hover {
+    background: rgb(214, 48, 48);
+}
+
+.addBtn-container{
+    min-width: 9vw;
+    align-items: center;
+    background: #ffffff;
+    border:none;
+    outline: none;
+    height: 2.8rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+#Add-Entry {
+    background: rgb(39, 168, 243);
+}
+
+#Add-Entry:hover {
+    background: rgb(33, 138, 199);
+}
+
+
+
+
+/*----------------------------------------- POPUP WINDOW STYLE -----------------------------------------*/
+.popup-overall {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.gradeInformation-popup,
+.renameColumn-popup,
+.addColumn-popup,
+.rmvColumn-popup,
+.add-popup {
+    overflow: auto;
+    position: fixed;
+    z-index: 200;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 30vw;
+    padding: 0.8rem 1.8rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+.gradeInformation-popup.activate,
+.renameColumn-popup.activate,
+.addColumn-popup.activate,
+.rmvColumn-popup.activate,
+.add-popup.activate {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+  
+#popup .close-btn {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background:rgb(141, 30, 30);
+    color: #eee;
+    text-align: center;
+    line-height: 1.2rem;
+    border-radius: 0.95rem;
+    cursor: pointer;
+}
+  
+#popup .close-btn:hover{
+    background:rgb(214, 11, 11);
+    font-weight: bold;
+}
+  
+#item1 {
+    grid-area: 1 / 1 / span 1 / span 3;
+}
+  
+#item2 {
+    grid-area: 2 / 1 / span 1 / span 3;
+}
+  
+#item11 {
+    grid-area: 11 / 1 / span 1 / span 3;
+}
+  
+#popup form {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+  
+#popup form h2 {
+    text-align: center;
+    color:#222;
+    margin: 0.5rem 0 1.2rem;
+    font-size: 1.3rem;
+    background-color: #fff;
+}
+  
+#popup form .form-element {
+    margin: 1rem 0px;
+    background-color: #fff;
+}
+  
+#popup form .form-element label {
+    font-size: 0.9rem;
+    color:#222;
+    background-color: #fff;
+}
+  
+#popup form .form-element input[type="text"]:focus,
+#popup form .form-element input[type="number"]:focus {
+    border-color: rgb(57, 143, 255);
+    font-weight: bold;
+    outline: none;
+}
+  
+#popup form .form-element input[type="text"]:hover,
+#popup form .form-element input[type="number"]:hover {
+    border-color: rgb(119, 167, 231);
+}
+  
+#popup form .form-element input[type="text"] {
+    background-color: #fff;
+    margin-top: 0.3rem;
+    display: block;
+    width: 93%;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+}
+  
+#popup form .form-element input[type="number"] {
+    background-color: #fff;
+    margin-top: 0.2rem;
+    display: block;
+    width: 77%;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+}
+  
+#popup form .form-element input[type="submit"] {
+    width: 100%;
+    height: 2.4rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgb(82, 78, 78);
+    color: #f5f5f5;
+    border-radius: 16px;
+    cursor: pointer;
+}
+  
+#popup form .form-element input[type="submit"]:hover {
+    background: #1a79ca;
+    color: #f5f5f5;
+    font-weight: bold;
+}
+  
+#popup form .form-element a {
+    background-color: #fff;
+    display: block;
+    text-align: right;
+    font-size: 0.95rem;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#popup form .form-element select {
+    background-color: #fff;
+    margin-top: 0.2rem;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1175px){
+    .creatorNameContent{
+      display: grid;
+      grid-template-columns: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      grid-gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .creatorNameContent{
+      grid-template-columns: 70%;
+    }
+    .gradeInformation-popup,
+    .renameColumn-popup,
+    .addColumn-popup,
+    .rmvColumn-popup,
+    .add-popup {
+        height: 90vh;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 680px), screen and (max-height: 600px){
+    #item1 {
+        grid-area: 1 / 1 / span 1 / span 5;
+    }
+      
+    #item2 {
+        grid-area: 2 / 1 / span 1 / span 5;
+    }
+      
+    #item11 {
+        grid-area: 11 / 1 / span 1 / span 5;
+    }
+      
+    #popup form {
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
+

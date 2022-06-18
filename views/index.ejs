@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/indexStyle.css">
+    <link rel="icon" href="./env/calculatorIcon.ico">
+    
+    <title>SCALE | Home</title>
+</head>
+<body>
+
+    <!-- LOGIN AND SIGNUP FORM -->
+    <div class="formCover">
+        <div class="container" id="modalForm">
+            <div class="signin-signup">
+                <form action="" method="POST" id="signin" class="sign-in-form">
+                    <div class="top-left">
+                        <button type="button" class="closeBtn">&#10006;</button>
+                    </div>
+                    <h2 class="title">Sign in</h2>
+                    <p class="registerSuccess" style="text-align: center;"></p>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="loginEmail" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="loginPassword" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <p class="loginError" style="text-align: center"></p>
+                    <input type="submit" value="Login" class="btn" id="LoginBtn">
+                    <p class="account-text">Don't have an account?<a href="#" id="sign-up-btn2"> Sign up</a></p>
+                </form>
+                <form action="" method="POST" id="signup" class="sign-up-form">
+                    <div class="top-right">
+                        <button type="button" class="closeBtn2">&#10006;</button>
+                    </div>
+                    <h2 class="title">Sign up</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="registerUsername" id="registerUsername" placeholder="Username" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" name="registerEmail" id="registerEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="registerPassword" id="registerPassword" placeholder="Password" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="registerConfirmPassword" id="registerConfirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <p class="registerError" style="text-align: center;"></p>
+                    <input type="submit" value="Sign up" class="btn" id="SignupBtn">
+                    <p class="account-text">Already have an account?<a href="#" id="sign-in-btn2"> Sign in</a></p>
+                </form>
+            </div>
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="panel-content">
+                        <h3>Already have an account?</h3>
+                        <p>You can loging in by pressing the button below. Thank you for using our service, we will keep it updated and make your job easier.</p>
+                        <button class="btn" id="sign-in-btn">Sign in</button>
+                    </div>
+                    <img src="./env/signin.svg" alt="" class="image">
+                </div>
+                <div class="panel right-panel">
+                    <div class="panel-content">
+                        <h3>New to Scale?</h3>
+                        <p>You can register a new account by pressing the button below. Thank you for visiting our service, we hope you will enjoy SCALE and have a nice day.</p>
+                        <button class="btn" id="sign-up-btn">Sign Up</button>
+                    </div>
+                    <img src="./env/signup.svg" alt="" class="image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- MAIN CONTENT -->
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">C❄️LDHeart</a></h2>
+            <div class="navigation">
+                <a href="#" class="navi active" id="home" onclick="switchContent(this)">Home</a>
+                <a href="#" class="navi" id="about" onclick="switchContent(this)">About us</a>
+                <a href="#" class="navi" id="contact" onclick="switchContent(this)">Contact</a>
+                <a href="#" class="navi" id="openModalSignin">Login</a>
+            </div>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+        <div class="content">
+            <div class="info active" id="homeContent">
+                <img src="./env/Table.svg" alt="" class="imageContent">
+                <h2>SCALE<br><span>Student Calculation Table</span></h2>
+                <p>Lazy to use some kind of excel or spreadsheet just to calculate your students grade or rank? <br/>SCALE is here just for you and make everyting pieces</p>
+                <button class="info-btn" id="openModalSignup">Get Started</button>
+            </div>
+
+
+            <div class="info" id="aboutContent">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./env/Obedient.jpeg">
+                        </div>
+                        <div class="card-content">
+                            <p>OBEDIENT BOAS JR PUTRO<br/>20021106045</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./env/Aril.jpg">
+                        </div>
+                        <div class="card-content">
+                            <p>ARIL SARAUN<br/>20021106014</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./env/Livirji.jpg">
+                        </div>
+                        <div class="card-content">
+                            <p>LIVIRJI VIORELA WANTALANGI<br/>20021106116</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./env/William.jpeg">
+                        </div>
+                        <div class="card-content">
+                            <p>WILLIAM DARREN BEETHOVEN SAHID<br/>20021106070</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div class="info" id="contactContent">
+                <h2>SCALE</h2>
+                <p>We are sorry, this service currently not available right now.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const BASE_URL = "<%= apiURL %>";
+        const NEXT_PATH = "<%= nextPath %>";
+    </script>
+    <script src="./js/indexScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/jquery 3.6.0/jquery-3.6.0.js"></script>
+</body>
+</html>
